@@ -29,6 +29,16 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: `WPGraphQL`,
+        fieldName: `wpgraphql`,
+        url:
+          process.env.WORDPRESS_GRAPHQL_ENDPOINT ||
+          `https://dummyurl.com/graphql`,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
